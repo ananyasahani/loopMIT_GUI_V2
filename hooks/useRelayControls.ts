@@ -2,6 +2,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { RelayState, RelayNumber } from '@/types/esp.types';
 
+// Web Serial API types
+type SerialPort = any;
+type ReadableStreamDefaultReader = any;
+type WritableStreamDefaultWriter = any;
+
 export const useRelayControls = () => {
   const [relayStates, setRelayStates] = useState<RelayState>({
     relay1: false,
